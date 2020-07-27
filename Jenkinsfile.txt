@@ -5,7 +5,7 @@ pipeline {
             steps {
                
                 sh """
-                   curl "https://api.GitHub.com/repos/kandhavelumc/githubhook/statuses/$GIT_COMMIT?access_token=d6d32e4777a709af2bcb726c8c1bd40e8988f449" \
+                   curl "https://api.GitHub.com/repos/kandhavelumc/githubhook/statuses/$GIT_COMMIT?access_token=59aef4f14f4dd60b1cd70f0e0b544d65d8cb54d4" \
   -H "Content-Type: application/json" \
   -X POST \
   -d "{\"state\": \"success\",\"context\": \"CI / test\", \"description\": \"Jenkins\", \"target_url\": \"http://35.165.234.254:8080/job/githubhook/$BUILD_NUMBER/console\"}"
