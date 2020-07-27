@@ -9,7 +9,7 @@ pipeline {
     }
     post { 
         always { 
-           whoami
+            echo 'This will always run'
         }
     }
 }
