@@ -9,7 +9,10 @@ pipeline {
     }
     post { 
         always { 
-            echo 'This will always run'
+           curl "https://api.GitHub.com/repos/kandhavelumc/githubhook/statuses/$GIT_COMMIT?access_token=d6d32e4777a709af2bcb726c8c1bd40e8988f449" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d "{\"state\": \"success\",\"context\": \"CI / test\", \"description\": \"Jenkins\", \"target_url\": \"http://35.165.234.254:8080/job/test/$BUILD_NUMBER/console\"}"
         }
     }
 }
