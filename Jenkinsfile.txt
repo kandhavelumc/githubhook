@@ -18,4 +18,18 @@ pipeline {
             }
         }
     }
+post {
+        always {
+            echo 'I will do this 
+                  no matter what the status is'
+        }
+        success {
+            hipchatSend(color: 'GREEN',
+            message: 'OK')
+        }
+        failure {
+            hipchatSend(color: 'RED',
+            message: 'FAIL')
+        }
+    }
 }
