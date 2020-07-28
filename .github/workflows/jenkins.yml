@@ -24,4 +24,4 @@ jobs:
         url: "http://35.165.234.254:8080"
         user: "webappadmin"
         token: "11148e94120a20a0685784980711e40ca5"
-        job: "test"
+        job: "githubtestcase"
